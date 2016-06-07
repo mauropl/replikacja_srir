@@ -1,1 +1,1 @@
-katalog z kodami
+katalog z k odami
