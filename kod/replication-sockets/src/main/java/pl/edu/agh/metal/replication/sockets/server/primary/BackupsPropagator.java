@@ -5,6 +5,11 @@ import pl.edu.agh.metal.replication.sockets.server.ServerPropagator;
 import java.net.Socket;
 import java.util.List;
 
+/**
+ * Klasa pozwala propagować komendę od klienta do innych BACKUPÓW. Dla każdego BACKUPU tworzone są osobne wątki.
+ *
+ * @see Propagation
+ */
 public class BackupsPropagator implements ServerPropagator {
 
     private List<Socket> sockets;

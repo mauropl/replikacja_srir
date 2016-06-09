@@ -9,6 +9,13 @@ import java.io.InputStreamReader;
 import java.net.ServerSocket;
 import java.net.Socket;
 
+/**
+ * Klasa instancjonowana tylko w przypadku serwera BACKUP. Odpowiada ona za przyjęcie połączeń z PRIMARY.
+ * Gdy PRIMARY wykrywa to połączenie to wysyła żądanie synchronize z całą listą.
+ *
+ * @see DataHolder
+ *
+ */
 public class PrimaryConnector implements Runnable {
 
     private DataHolder dataHolder;

@@ -4,6 +4,12 @@ import java.io.BufferedWriter;
 import java.io.OutputStreamWriter;
 import java.net.Socket;
 
+/**
+ * Klasa zajmuje się połączeniem dla jedengo backupa i wysłaniem komendy. Wszystko dzieje się w osobnym wątku.
+ *
+ * @see Socket
+ *
+ */
 public class Propagation implements Runnable {
 
     private final Socket backupSocket;

@@ -10,6 +10,13 @@ import java.net.ServerSocket;
 import java.net.Socket;
 import java.util.List;
 
+/**
+ * Klasa instancjonowane tylko w przypadku serwera PRIMARY. Odpowiada za równoległe przyjmowanie połączeń od BACKUPÓW.
+ * Gdy BACKUP się łączy, klasa wysyła mu żądanie synchronize. I zapisuje socket połączenia w liście backupów.
+ *
+ * @see ServerSocket
+ * @see DataHolder
+ */
 public class BackupsConnector implements Runnable {
 
     private ServerSocket receivingSocket;

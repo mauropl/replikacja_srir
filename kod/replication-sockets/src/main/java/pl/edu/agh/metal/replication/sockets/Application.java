@@ -12,6 +12,17 @@ import java.util.ArrayList;
 import java.util.Collections;
 import java.util.List;
 
+/**
+ * Klasa w zalezności od przekazanego parametru różnie instancjonuje klasy:
+ *
+ * <table summary="Możliwe tryby pracy">
+ *  <tr>    <th>Parametr</th>        <th>Zachowanie</tr>
+ *  <tr>    <td>primary<td>          <td>Tworzony jest serwer PRIMARY, który odbiera żądania klientów, rejestracje BACKUPÓW i propaguje żądania klientów do BACKUPÓW</td></tr>
+ *  <tr>    <td>backup<td>           <td>Tworzony jest serwer BACKUP, który łączy się z PRIMARY i oczekuje na przekazane żądania</td></tr>
+ *  <tr>    <td>client<td>           <td>Tworzony jest konsolowy klient do serwera PRIMARY, który pozwala wsysyłać żądania write / read</td></tr>
+ * </table>
+ *
+ */
 public class Application {
 
     public static final void main(String[] args) {

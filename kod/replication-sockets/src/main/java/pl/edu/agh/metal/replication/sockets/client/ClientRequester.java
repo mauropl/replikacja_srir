@@ -4,7 +4,10 @@ import pl.edu.agh.metal.replication.sockets.Config;
 
 import java.io.*;
 import java.net.Socket;
-
+/**
+ Klasa wyświetla w konsoli zapytanie do uzytkownika jaką komendę chce wysłać na serwer.
+ write, read lub exit. Gdy użytkownik wpisze komendę tworzony jest socket i komenda wysyłana do serwera Primary.
+ */
 public class ClientRequester implements Runnable {
 
     private Socket socket;
